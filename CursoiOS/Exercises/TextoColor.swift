@@ -23,7 +23,6 @@ struct TextoColor: View {
         
     }
 }
-
 #Preview {
     TextoColor()
 }
