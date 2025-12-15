@@ -10,7 +10,7 @@ import SwiftUI
 struct LazyScroll:View {
     var body: some View {
         
-        var elemtents = 1...500
+        let elemtents = 1...500
         let gritItems = [GridItem(.fixed(100)),
                          GridItem(.fixed(100)),
                          GridItem(.fixed(100))]
