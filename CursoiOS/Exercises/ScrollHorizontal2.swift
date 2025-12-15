@@ -19,12 +19,36 @@ struct ScrollHorizontal2: View{
                     RoundedRectangle(cornerRadius: 12)
                             .fill(item)
                             .frame(width: gr.size.width - 60, height: 200)
+                            
                         //  El lector de geometría se utiliza para que el ancho de la vista sea siempre un poco menor que el ancho de la pantalla, de modo que se pueda ver la segunda vista saliendo de la pantalla.
                     }
                 }
             }
-            .padding(.horizontal)
+            .contentMargins(.vertical, 30,  ) //Vertical define el ancho de del padding de vertical
+            .border(Color.black)
+            .padding(20)
+            
+            GeometryReader{ gr in
+                ScrollView(.vertical, showsIndicators: false){
+                   
+                    VStack{
+                        ForEach(items, id: \.self) { item in
+                        RoundedRectangle(cornerRadius: 12)
+                                .fill(item)
+                                .frame(width: gr.size.width - 60, height: 200)
+                            //  El lector de geometría se utiliza para que el ancho de la vista sea siempre un poco menor que el ancho de la pantalla, de modo que se pueda ver la segunda vista saliendo de la pantalla.
+                        }
+                    }
+                }
+                .contentMargins(.horizontal, 10,  )  //indica que si quieres visualizar los indicadores de dezplazamiento
+                .border(Color.black)
+                .padding(20)
+                .padding(.top, 270,)
+               
+            }
         }
+        
+       
     }
 }
 

@@ -1,5 +1,6 @@
 //
 //  LazyScroll.swift
+
 //  CursoiOS
 //
 //  Created by Hector Cortes  on 08/12/25.
@@ -36,8 +37,6 @@ struct LazyScroll:View {
                             Circle() // Genera circulos
                             .frame(height: 30)} //Define el tamaño de circulos
                     }
-               
-
             })
         }
         
