@@ -14,6 +14,7 @@ struct Buttons: View {
             Button("Enabled"){}
             
             Button("Disable"){}
+            
                 .disabled(true)
             
             Button("Enable"){}
