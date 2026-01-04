@@ -57,12 +57,20 @@ struct NavBar: View {
 struct HomeView: View {
     var body: some View {
         NavigationView {
-            VStack {
-                Text("Página de Inicio")
-                    .font(.largeTitle)
-                    .padding()
+            ZStack {
+                // Fondo
+                Color.blue
+                    .ignoresSafeArea()
                 
-                Spacer()
+                // Contenido
+                VStack {
+                    Text("Página de Inicio")
+                        .font(.largeTitle)
+                        .padding()
+                        .foregroundColor(.white) // Texto blanco para contraste
+                    
+                    Spacer()
+                }
             }
             .navigationTitle("Inicio")
         }
